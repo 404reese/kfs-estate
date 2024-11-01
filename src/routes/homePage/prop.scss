@@ -1,0 +1,46 @@
+$card-border: 1px solid #ccc;
+$border-radius: 8px;
+$padding: 20px;
+$margin: 20px 0;
+$hover-scale: 1.05; // Scale factor for hover
+
+.property-card {
+  display: flex;
+  border: $card-border;
+  border-radius: $border-radius;
+  overflow: hidden;
+  margin: $margin;
+  text-decoration: none; // Remove underline from link
+  transition: transform 0.3s; // Smooth transition for scaling
+
+  .property-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .property-details {
+    flex: 1;
+    padding: $padding;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      margin: 0 0 10px;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+  }
+
+  &:hover {
+    transform: scale($hover-scale); // Scale up on hover
+  }
+}
